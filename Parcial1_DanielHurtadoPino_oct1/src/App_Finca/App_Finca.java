@@ -52,7 +52,6 @@ public class App_Finca extends javax.swing.JFrame {
         btn_salir = new javax.swing.JButton();
         btn_consultar = new javax.swing.JButton();
         btn_actualizar = new javax.swing.JButton();
-        btn_guardar1 = new javax.swing.JButton();
 
         jButton5.setBackground(new java.awt.Color(204, 204, 204));
         jButton5.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
@@ -325,6 +324,11 @@ public class App_Finca extends javax.swing.JFrame {
         btn_salir.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
         btn_salir.setText("Salir");
         btn_salir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_salirActionPerformed(evt);
+            }
+        });
 
         btn_consultar.setBackground(new java.awt.Color(204, 204, 204));
         btn_consultar.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
@@ -340,11 +344,6 @@ public class App_Finca extends javax.swing.JFrame {
         btn_actualizar.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
         btn_actualizar.setText("Actualizar");
         btn_actualizar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        btn_guardar1.setBackground(new java.awt.Color(204, 204, 204));
-        btn_guardar1.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
-        btn_guardar1.setText("Guardar");
-        btn_guardar1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -367,11 +366,6 @@ public class App_Finca extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(btn_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
                     .addContainerGap()))
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel9Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btn_guardar1, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,7 +374,7 @@ public class App_Finca extends javax.swing.JFrame {
                 .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
+                .addGap(131, 131, 131)
                 .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -393,11 +387,6 @@ public class App_Finca extends javax.swing.JFrame {
                     .addGap(162, 162, 162)
                     .addComponent(btn_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(247, Short.MAX_VALUE)))
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                    .addContainerGap(235, Short.MAX_VALUE)
-                    .addComponent(btn_guardar1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(174, 174, 174)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -516,6 +505,10 @@ public class App_Finca extends javax.swing.JFrame {
     private void btn_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoActionPerformed
        fnt_limpiarcontroles();
     }//GEN-LAST:event_btn_nuevoActionPerformed
+
+    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
+        System.exit(0);  
+    }//GEN-LAST:event_btn_salirActionPerformed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -552,7 +545,6 @@ public class App_Finca extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_actualizar;
     private javax.swing.JButton btn_consultar;
-    private javax.swing.JButton btn_guardar1;
     private javax.swing.JButton btn_nuevo;
     private javax.swing.JButton btn_registrar;
     private javax.swing.JButton btn_salir;
