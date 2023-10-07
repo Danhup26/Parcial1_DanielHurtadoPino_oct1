@@ -479,7 +479,28 @@ public class App_Finca extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_registrarActionPerformed
 
     private void btn_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarActionPerformed
-        
+    sw = false;
+        pos = 0;
+            for(int i = 0; i < int_posiciones; i++){
+                if(txt_identificacion.getText().equals(trabajador[i].getStr_id())){
+                    sw = true;
+                    pos = i;
+                    break;
+                }
+            }
+            
+                if(sw == false){
+                    JOptionPane.showMessageDialog(null, "No se encontraron " + "registros", "Consultar",JOptionPane.ERROR_MESSAGE);
+                }else{
+                    txt_nombre.setText(trabajador[pos].getStr_nombres());
+                    txt_apellidos.setText( trabajador[pos].getStr_apellidos());
+                    txt_sexo.setText(trabajador[pos].getStr_sexo());
+                    txt_correo.setText(trabajador[pos].getStr_correo());
+                    txt_contacto.setText(""+trabajador[pos].getInt_contacto());
+                    txt_direccion.setText(trabajador[pos].getStr_direccion());
+                    txt_salario.setText(""+trabajador[pos].getFlt_salario());
+                
+                }
     }//GEN-LAST:event_btn_consultarActionPerformed
     private void fnt_limpiarcontroles(){
         txt_identificacion.setText("");
